@@ -11,9 +11,25 @@ config_version=5
 [application]
 
 config/name="Fair-and-Square"
+run/main_scene="res://Scenes/Menus/Main/main_menu.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
 config/icon="res://Assets/icon.svg"
+
+[autoload]
+
+Savegame="*res://Global/Utils/savegame.gd"
+Shapes="*res://Global/Variables/Shapes.gd"
+
+[display]
+
+window/size/viewport_width=1080
+window/size/viewport_height=2340
+window/size/mode=3
+window/size/resizable=false
+window/stretch/mode="viewport"
+window/handheld/orientation=1
 
 [rendering]
 
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true
